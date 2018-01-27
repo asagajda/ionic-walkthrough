@@ -1,0 +1,8 @@
+{
+  "name": "walkthrough",
+  "app_id": "7abca303",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
