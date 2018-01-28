@@ -1,0 +1,67 @@
+<!--
+  Generated template for the WalkthroughModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+    <ion-content class="no-scroll">
+      <ion-slides (ionSlideDidChange)="slideChanged()">
+         <ion-slide *ngFor="let slide of slides; let i = index">
+           <div *ngIf="i==0; then thenBlock else elseBlock"></div>
+           <ng-template #thenBlock>
+             <br *ngIf="plt.is('ios')" />
+             <br *ngIf="plt.is('ios')" />
+             <p class="slide-title-black"><font size=60% color=black>COACH</font><font size=60% color=red>CARE</font></p>
+             <p class="slide-title-black" [innerHTML]="slide.description"></p>
+           </ng-template>
+           <ng-template #elseBlock>
+             <br *ngIf="plt.is('ios')" />
+             <br *ngIf="plt.is('ios')" />
+             <p class="slide-title-red" [innerHTML]="slide.titlered"></p>
+             <p class="slide-title-black" [innerHTML]="slide.description"></p>
+           </ng-template>
+           <!-- <img [src]="../../assets/imgs/slide.image" class="slide-image"/> -->
+           <div id="demo-device-ios" ng-class="previewPlatform" class="ios" style="">
+              <img src="{{slide.image}}" class="slide-image"/>
+              <!-- <iframe id="demo-ios" frameborder="0">
+
+              </iframe> -->
+           </div>
+         </ion-slide>
+       </ion-slides>
+    </ion-content>
+
+    <ng-template [ngIf]="mySlides === undefined || mySlides.isBeginning()">
+      <ion-footer>
+        <ion-toolbar align-title=“center” >
+          <ion-title (click)="goForward()">{{counterText}}</ion-title>
+        </ion-toolbar>
+      </ion-footer>
+    </ng-template>
+
+    <ng-template [ngIf]="mySlides !== undefined && mySlides.isEnd()">
+      <ion-footer>
+        <ion-toolbar align-title=“center” >
+          <ion-title (click)="viewController.dismiss()">{{counterText}}</ion-title>
+        </ion-toolbar>
+      </ion-footer>
+    </ng-template>
+
+    <ng-template [ngIf]="mySlides !== undefined && mySlides.isEnd()==false && mySlides.isBeginning()==false">
+      <ion-footer>
+        <ion-toolbar align-title=“center”>
+          <ion-buttons left>
+            <button ion-button icon-only (click)="goBack()" class="button-white-txt">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+          </ion-buttons>
+          <ion-title>{{counterText}}</ion-title>
+          <ion-buttons right>
+            <button ion-button icon-only (click)="goForward()" class="button-white-txt">
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-footer>
+    </ng-template>

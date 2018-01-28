@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Walkthrough demo
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    There are some emails in local storage (pushed on ionViewDidLoad)
   </p>
+  <p>
+    After login we'll check if user have seen walkthrough already
+  </p>
+  <button (click)="checkAfterLogin(makeid() + '@gmail.com')">Login as new user</button>
+  <button (click)="checkAfterLogin('asagajda@gmail.com')">Login as existing user</button>
 </ion-content>

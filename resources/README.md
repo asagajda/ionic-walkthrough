@@ -1,8 +1,6 @@
-These are Cordova resources. You can replace icon.png and splash.png and run
-`ionic cordova resources` to generate custom icons and splash screens for your
-app. See `ionic cordova resources --help` for details.
+- CouchCare Walkthrough test task
 
-Cordova reference documentation:
+Dynamic slides texts and image urls managing via array `slides` in file `walkthrough-modal.ts`
+Edit array slides and put images to `assets/imgs`
 
-- Icons: https://cordova.apache.org/docs/en/latest/config_ref/images.html
-- Splash Screens: https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/
+Just checkout and run `ionic lab`

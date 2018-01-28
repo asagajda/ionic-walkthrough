@@ -1,0 +1,79 @@
+page-walkthrough-modal {
+    .toolbar-background {
+        background: #222;
+        border-color: transparent;
+        color: #ddd;
+      }
+
+    .button-white-txt {
+      color: #ddd;
+    }
+
+    .toolbar-title{
+        color: #ddd;
+      }
+
+    .slide-zoom {
+      height: 100%;
+    }
+
+    .slide-title-red {
+      color:Red;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .slide-title-black {
+      color:Black;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .slide-title {
+      margin-top: 200px;
+    }
+
+    .ios.slide-title-black {
+      margin-top: 200px
+    }
+
+    .slide-image {
+      // max-height: 50%;
+      max-width: 198px;
+      margin: 48px 0;
+    }
+
+    .toolbar-title {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+
+    .no-scroll .scroll-content{
+      overflow: hidden;
+    }
+
+    #demo-device-ios, #demo-device-android, #demo-device-windows {
+      width: 280px;
+      height: 480px;
+      background: center top no-repeat url(../../assets/imgs/devices-sprite.jpg);
+      background-size: 280px;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+
+    .platform-preview {
+        position: absolute;
+        right: 0;
+        text-align: center;
+        right: -20px;
+        z-index: 1;
+        background-color: white;
+    }
+
+}
